@@ -100,15 +100,46 @@ Didapat password yaitu **d1b1langbukanapaapajugagapercaya**
 ## 11
 >  Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80!
 
+Menggunakan `src port 80` di Capture Filter
+
+![11](https://user-images.githubusercontent.com/57633103/134199342-44c1c847-4397-405f-8b53-6433bec4b78e.png)
+
 ## 12
 >  Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
+
+Menggunakan `port 21` di capture filter
+
+![12](https://user-images.githubusercontent.com/57633103/134199397-550a28b2-d80e-462e-81c4-24a5b2e052c3.png)
 
 ## 13
 >  Filter sehingga wireshark hanya menampilkan paket yang menuju port 443!
 
+Menggunakan `dst port 443` pada capture filter
+
+![13](https://user-images.githubusercontent.com/57633103/134199419-5ed9739d-85c1-401e-8614-56e0d8ea1b01.png)
+
 ## 14
 >  Filter sehingga wireshark hanya mengambil paket yang tujuannya ke kemenag.go.id!
+
+Menggunakan `dst host kemenag.go.id` pada capture filter
+
+![14](https://user-images.githubusercontent.com/57633103/134199446-9e6d41b9-8c5f-460f-8245-f7cf54595347.png)
 
 ## 15
 >  Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 
+Mengecek IP dengan settingan di macbook
+
+![15 1](https://user-images.githubusercontent.com/57633103/134199467-b6c73038-c730-4aa8-84f5-83774a51bd7b.png)
+
+![15 2](https://user-images.githubusercontent.com/57633103/134199498-69e2e4cf-980a-43b5-bd0d-36a6eaaee963.png)
+
+Pada windows, ip dapat dicek pada comand prompt dengan mengetikkan ipconfig
+
+![15 3](https://user-images.githubusercontent.com/57633103/134199531-39ab1ee0-a19d-4f41-88c6-2719a740539b.png)
+
+Setelah itu scroll informasi untuk mendapatkan melihat ipv4 pada Wi-Fi
+
+![15 4](https://user-images.githubusercontent.com/57633103/134199550-42551f64-26ab-4f17-952b-cfe6a8b4657d.png)
+
+Setelah itu dapat memasukkan sintaks yang sama pada filter.
