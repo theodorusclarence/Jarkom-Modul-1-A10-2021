@@ -132,6 +132,8 @@ Mengecek IP dengan settingan di macbook
 
 ![15 1](https://user-images.githubusercontent.com/57633103/134199467-b6c73038-c730-4aa8-84f5-83774a51bd7b.png)
 
+Kemudian dapat menggunakan `ip src 192.168.100.11` pada Display Filter
+
 ![15 2](https://user-images.githubusercontent.com/57633103/134199498-69e2e4cf-980a-43b5-bd0d-36a6eaaee963.png)
 
 Pada windows, ip dapat dicek pada comand prompt dengan mengetikkan ipconfig
