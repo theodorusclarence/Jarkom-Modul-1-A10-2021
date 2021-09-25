@@ -221,3 +221,7 @@ Setelah itu scroll informasi untuk mendapatkan melihat ipv4 pada Wi-Fi
 ![15 4](https://user-images.githubusercontent.com/57633103/134199550-42551f64-26ab-4f17-952b-cfe6a8b4657d.png)
 
 Setelah itu dapat memasukkan sintaks yang sama pada filter.
+
+## Kendala
+
+Kendala yang kami alami adalah karena salah satu menggunakan macOS, maka awalnya sempat kesulitan untuk yang FTP, dan tidak ngeh kalau soal nomor 12 wajib memunculkan paketnya juga.
