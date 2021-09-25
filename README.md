@@ -104,6 +104,8 @@ Menggunakan `src port 80` di Capture Filter
 
 ![11](https://user-images.githubusercontent.com/57633103/134199342-44c1c847-4397-405f-8b53-6433bec4b78e.png)
 
+Untuk memunculkan paket, kita bisa mencoba membuka basic.ichimarumaru.tech
+
 ## 12
 >  Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
 
@@ -124,6 +126,8 @@ Menggunakan `dst port 443` pada capture filter
 Menggunakan `dst host kemenag.go.id` pada capture filter
 
 ![14](https://user-images.githubusercontent.com/57633103/134199446-9e6d41b9-8c5f-460f-8245-f7cf54595347.png)
+
+Untuk memunculkan paket, kita bisa mencoba membuka kemenag.go.id
 
 ## 15
 >  Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
