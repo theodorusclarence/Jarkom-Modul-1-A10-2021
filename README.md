@@ -6,19 +6,33 @@
 
 ### List
 [Soal 1](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#1)
+
 [Soal 2](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#2)
+
 [Soal 3](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#3)
+
 [Soal 4](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#4)
+
 [Soal 5](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#5)
+
 [Soal 6](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#6)
+
 [Soal 7](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#7)
+
 [Soal 8](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#8)
+
 [Soal 9](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#9)
+
 [Soal 10](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#10)
+
 [Soal 11](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#11)
+
 [Soal 12](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#12)
+
 [Soal 13](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#13)
+
 [Soal 14](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#14)
+
 [Soal 15](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#15)
 
 
