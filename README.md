@@ -5,6 +5,7 @@
 - Husnan 05111940007002
 
 ### List
+
 1. [Soal 1](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#1)
 2. [Soal 2](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#2)
 3. [Soal 3](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#3)
@@ -21,9 +22,9 @@
 14. [Soal 14](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#14)
 15. [Soal 15](https://github.com/theodorusclarence/Jarkom-Modul-1-E01-2021#15)
 
+## 1
 
-## 1 
-> Sebutkan webserver yang digunakan pada "ichimarumaru.tech"! 
+> Sebutkan webserver yang digunakan pada "ichimarumaru.tech"!
 
 Pertama, cari dengan mengetikkan pada filter `tcp contains ichimarumaru.tech`.
 
@@ -35,14 +36,16 @@ Setelah itu klik kanan pada salah satu paket dan pilih `Follow > TCP Stream`
 
 Akan muncul beberapa informasi, informasi web server dapat dilihat pada tulisan server yang mana webserver yang digunakan adalah **nginx/1.18.0 (Ubuntu)**
 
-## 2 
-> Temukan paket dari web-web yang menggunakan basic authentication method! 
+## 2
 
-Filter dilakukan dengan *syntax* `http.authbasic`
+> Temukan paket dari web-web yang menggunakan basic authentication method!
+
+Filter dilakukan dengan _syntax_ `http.authbasic`
 
 ![Picture2](https://user-images.githubusercontent.com/65794806/134769893-5a6703ad-7aa7-4e11-801d-f1128285c0e0.png)
 
-## 3 
+## 3
+
 > Ikuti perintah di basic.ichimarumaru.tech! Username dan password bisa didapatkan dari file .pcapng!
 
 Melihat HTTP Auth Header dengan `http.authbasic` di display filter
@@ -57,14 +60,16 @@ Setelah itu masuk ke basic.ichimarumaru.tech dengan username **kuncimenujulautan
 
 ![Picture3s2](https://user-images.githubusercontent.com/65794806/134770132-6618d373-ae85-4948-b6d8-067daf4004c7.png)
 
-## 4 
+## 4
+
 > Temukan paket mysql yang mengandung perintah query select!
 
 Menggunakan display filter `mysql contains SELECT || mysql contains select`
 
 ![Picture4](https://user-images.githubusercontent.com/65794806/134770216-bb21c232-74eb-47d9-aca5-0722a8668589.png)
 
-## 5 
+## 5
+
 > Login ke portal.ichimarumaru.tech kemudian ikuti perintahnya! Username dan password bisa didapat dari query insert pada table users dari file .pcap!
 
 Pertama, mencari query insert dengan `mysql contains INSERT || mysql contains insert`
@@ -80,8 +85,8 @@ Setelah itu masuk ke portal.ichimarumaru.tech dengan username **akakanomi** dan 
 
 ![Picture5s2](https://user-images.githubusercontent.com/65794806/134770682-9bef96f3-b144-4982-9cf8-402bfd3d4378.png)
 
+## 6
 
-## 6 
 > Cari username dan password ketika melakukan login ke FTP Server!
 
 Sesuai dengan referensi, default port FTP server adalah port 21
@@ -94,7 +99,7 @@ Maka, kami menggunakan `ftp && tcp.port == 21` pada Display Filter. Kemudian kam
 
 Ketika dicek, didapatkan user: **secretuser** pada FTP Request arg
 
-Kemudian kami juga mengecek password, 
+Kemudian kami juga mengecek password,
 
 ![image](https://user-images.githubusercontent.com/55318172/134177590-685128e1-9418-4881-abbf-8d2f8bdb4362.png)
 
@@ -102,7 +107,8 @@ Ketika dicek, didapatkan password: **aku.pengen.pw.aja** pada FTP Request arg
 
 Maka, username:password = **secretuser:aku.pengen.pw.aja**
 
-## 7 
+## 7
+
 > Ada 500 file zip yang disimpan ke FTP Server dengan nama 0.zip, 1.zip, 2.zip, ..., 499.zip. Simpan dan Buka file pdf tersebut. (Hint = nama pdf-nya "Real.pdf")
 
 Pertama, karena ingin mencari file yang bernama Real.pdf pada FTP Server, maka kami menggunakan display filter yaitu `ftp-data contains "Real.pdf`. Kemudian kami `Follow > TCP Stream`
@@ -117,14 +123,16 @@ Kemudian, file tersebut bisa langsung diunzip dan ketika dibuka tampilannya seba
 
 ![image](https://user-images.githubusercontent.com/55318172/134177984-cc17aef8-9c15-45d2-8996-b136f265323c.png)
 
-## 8 
+## 8
+
 > Cari paket yang menunjukan pengambilan file dari FTP tersebut!
 
 Karena pengambilan data dari FTP, maka kita bisa menggunakan command yang mirip dengan nomor 7, dengan mencari pengambilan file yaitu `RETR`, maka pada Display Filter dapat dicari `ftp-data.command contains RETR`.
 
 ![image](https://user-images.githubusercontent.com/55318172/134178149-fde8c90d-4260-4559-83a3-2c60051d5dc4.png)
 
-## 9 
+## 9
+
 > Dari paket-paket yang menuju FTP terdapat inidkasi penyimpanan beberapa file. Salah satunya adalah sebuah file berisi data rahasia dengan nama "secret.zip". Simpan dan buka file tersebut!
 
 Pada nomor 9, kami menggunakan `ftp-data.command contains secret.zip` untuk mencari file, kemudian menyimpan menggunakan `Follow > TCP Stream`, save as raw.
@@ -139,9 +147,9 @@ Kemudian kami setelah berhasil di unzip, terdapat pdf sebagai berikut
 
 ![image](https://user-images.githubusercontent.com/55318172/134178669-7a6a5573-499a-47fe-98fc-63f54a9cd257.png)
 
-
 ## 10
->  Selain itu terdapat "history.txt" yang kemungkinan berisi history bash server tersebut! Gunakan isi dari "history.txt" untuk menemukan password untuk membuka file rahasia yang ada di "secret.zip"!
+
+> Selain itu terdapat "history.txt" yang kemungkinan berisi history bash server tersebut! Gunakan isi dari "history.txt" untuk menemukan password untuk membuka file rahasia yang ada di "secret.zip"!
 
 Karena kita ingin mencari "history.txt" pada FTP, maka kita bisa menambahkan `ftp-data.command contains history.txt` pada Display Filter
 
@@ -160,7 +168,8 @@ Dari `Follow > TCP Stream`, atau menjalankan bash script line 289,
 Didapat password yaitu **d1b1langbukanapaapajugagapercaya**
 
 ## 11
->  Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80!
+
+> Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80!
 
 Menggunakan `src port 80` di Capture Filter
 
@@ -169,7 +178,8 @@ Menggunakan `src port 80` di Capture Filter
 Untuk memunculkan paket, kita bisa mencoba membuka basic.ichimarumaru.tech
 
 ## 12
->  Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
+
+> Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
 
 Menggunakan `port 21` di capture filter
 
@@ -177,7 +187,7 @@ Menggunakan `port 21` di capture filter
 
 ### Revisi
 
-Untuk mengambil paket-nya dapat melakukan connect dengan server filezilla  terlebih dahulu. Dapat dengan membuat server dari XAMPP dan melakukan connect dengan filezilla client. Setelah itu membuka wireshark dan melakukan filter dengan `port 21` pada koneksi *Adapter for loopback traffic capture* yang didalamnya terdapat paket dari FTP.
+Untuk mengambil paket-nya dapat melakukan connect dengan server filezilla terlebih dahulu. Dapat dengan membuat server dari XAMPP dan melakukan connect dengan filezilla client. Setelah itu membuka wireshark dan melakukan filter dengan `port 21` pada koneksi _Adapter for loopback traffic capture_ yang didalamnya terdapat paket dari FTP.
 
 ![Soal12FTPa](https://user-images.githubusercontent.com/65794806/134770732-70c36042-b269-4d28-b875-0713545da368.png)
 
@@ -186,14 +196,16 @@ Hasil filter sebagai berikut.
 ![Soal12FTP](https://user-images.githubusercontent.com/65794806/134770761-cf8ef39e-8aa2-410f-a3e6-49a10be0904f.png)
 
 ## 13
->  Filter sehingga wireshark hanya menampilkan paket yang menuju port 443!
+
+> Filter sehingga wireshark hanya menampilkan paket yang menuju port 443!
 
 Menggunakan `dst port 443` pada capture filter
 
 ![13](https://user-images.githubusercontent.com/57633103/134199419-5ed9739d-85c1-401e-8614-56e0d8ea1b01.png)
 
 ## 14
->  Filter sehingga wireshark hanya mengambil paket yang tujuannya ke kemenag.go.id!
+
+> Filter sehingga wireshark hanya mengambil paket yang tujuannya ke kemenag.go.id!
 
 Menggunakan `dst host kemenag.go.id` pada capture filter
 
@@ -202,7 +214,8 @@ Menggunakan `dst host kemenag.go.id` pada capture filter
 Untuk memunculkan paket, kita bisa mencoba membuka kemenag.go.id
 
 ## 15
->  Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
+
+> Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 
 Mengecek IP dengan settingan di macbook
 
