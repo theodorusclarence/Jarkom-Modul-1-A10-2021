@@ -7,17 +7,61 @@
 ## 1 
 > Sebutkan webserver yang digunakan pada "ichimarumaru.tech"! 
 
+Pertama, cari dengan mengetikkan pada filter `tcp contains ichimarumaru.tech`.
+
+![Picture1](https://user-images.githubusercontent.com/65794806/134769729-5cf4b26a-eea0-4c51-b4e5-e108534809d2.png)
+
+Setelah itu klik kanan pada salah satu paket dan pilih `Follow > TCP Stream`
+
+![Picture1s2](https://user-images.githubusercontent.com/65794806/134769796-f6a47bbb-e834-4fa2-991d-7ea52258bb0b.png)
+
+Akan muncul beberapa informasi, informasi web server dapat dilihat pada tulisan server yang mana webserver yang digunakan adalah **nginx/1.18.0 (Ubuntu)**
+
 ## 2 
 > Temukan paket dari web-web yang menggunakan basic authentication method! 
+
+Filter dilakukan dengan *syntax* `http.authbasic`
+
+![Picture2](https://user-images.githubusercontent.com/65794806/134769893-5a6703ad-7aa7-4e11-801d-f1128285c0e0.png)
 
 ## 3 
 > Ikuti perintah di basic.ichimarumaru.tech! Username dan password bisa didapatkan dari file .pcapng!
 
+Melihat HTTP Auth Header dengan `http.authbasic` di display filter
+
+![Picture3](https://user-images.githubusercontent.com/65794806/134770121-9b77cf07-69a9-4f58-b2d3-46952debc80e.png)
+
+Setelah itu lihat isi dari Hypertext yang mana didalamnya ada **Authorization**. Kemudian pilih **Credentials** yaitu format dari username:password.
+
+**Credentials: kuncimenujulautan:tQKEJFbgNGC1NCZlWAOjhyCOm6o3xEbPkJhTciZN**
+
+Setelah itu masuk ke basic.ichimarumaru.tech dengan username **kuncimenujulautan** dan password **tQKEJFbgNGC1NCZlWAOjhyCOm6o3xEbPkJhTciZN** yang nantinya akan ada soal tambahan mengenai konfigurasi pengkabelan.
+
+![Picture3s2](https://user-images.githubusercontent.com/65794806/134770132-6618d373-ae85-4948-b6d8-067daf4004c7.png)
+
 ## 4 
 > Temukan paket mysql yang mengandung perintah query select!
 
+Menggunakan display filter `mysql contains SELECT || mysql contains select`
+
+![Picture4](https://user-images.githubusercontent.com/65794806/134770216-bb21c232-74eb-47d9-aca5-0722a8668589.png)
+
 ## 5 
 > Login ke portal.ichimarumaru.tech kemudian ikuti perintahnya! Username dan password bisa didapat dari query insert pada table users dari file .pcap!
+
+Pertama, mencari query insert dengan `mysql contains INSERT || mysql contains insert`
+
+![Picture5](https://user-images.githubusercontent.com/65794806/134770312-a1de6d29-f5cc-491e-8207-c2180012d345.png)
+
+Setelah itu akan muncul sebuah command INSERT yang dapat dilihat langsung pada display bawah maupun pada Request Command Query > Statement. Command INSERT tersebut memasukkan data username dan password.
+
+**Username: akakanomi**
+**Password: pemisah4lautan**
+
+Setelah itu masuk ke portal.ichimarumaru.tech dengan username **akakanomi** dan password **pemisah4lautan** yang nantinya akan ada soal tambahan mengenai konfigurasi pengkabelan.
+
+![Picture5s2](https://user-images.githubusercontent.com/65794806/134770682-9bef96f3-b144-4982-9cf8-402bfd3d4378.png)
+
 
 ## 6 
 > Cari username dan password ketika melakukan login ke FTP Server!
@@ -112,6 +156,16 @@ Untuk memunculkan paket, kita bisa mencoba membuka basic.ichimarumaru.tech
 Menggunakan `port 21` di capture filter
 
 ![12](https://user-images.githubusercontent.com/57633103/134199397-550a28b2-d80e-462e-81c4-24a5b2e052c3.png)
+
+### Revisi
+
+Untuk mengambil paket-nya dapat melakukan connect dengan server filezilla  terlebih dahulu. Dapat dengan membuat server dari XAMPP dan melakukan connect dengan filezilla client. Setelah itu membuka wireshark dan melakukan filter dengan `port 21` pada koneksi *Adapter for loopback traffic capture* yang didalamnya terdapat paket dari FTP.
+
+![Soal12FTPa](https://user-images.githubusercontent.com/65794806/134770732-70c36042-b269-4d28-b875-0713545da368.png)
+
+Hasil filter sebagai berikut.
+
+![Soal12FTP](https://user-images.githubusercontent.com/65794806/134770761-cf8ef39e-8aa2-410f-a3e6-49a10be0904f.png)
 
 ## 13
 >  Filter sehingga wireshark hanya menampilkan paket yang menuju port 443!
